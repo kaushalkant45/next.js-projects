@@ -1,3 +1,4 @@
+// components/Layout.js
 import Footer from "./Footer";
 
 export default function Layout({ children }) {
@@ -7,6 +8,12 @@ export default function Layout({ children }) {
         <div className="container mx-auto flex justify-between items-center px-4">
           <h1 className="text-3xl font-bold">My Landing Page</h1>
           <nav>
+            <a
+              href="/"
+              className="px-3 py-2 rounded-md text-sm font-medium hover:bg-blue-700"
+            >
+              Home
+            </a>
             <a
               href="/features"
               className="px-3 py-2 rounded-md text-sm font-medium hover:bg-blue-700"

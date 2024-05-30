@@ -1,3 +1,4 @@
+// pages/contact.js
 import { useEffect } from "react";
 import { gsap } from "gsap";
 import Layout from "../components/Layout";
@@ -13,7 +14,9 @@ export default function Contact() {
 
   return (
     <Layout>
-      <div>
+      <div className="pt-20">
+        {" "}
+        {/* Add padding top */}
         <h2 className="text-4xl font-bold mb-4">Contact Us</h2>
         <form className="contact-item max-w-lg mx-auto p-6 bg-white rounded-md shadow-md">
           <div className="mb-4">

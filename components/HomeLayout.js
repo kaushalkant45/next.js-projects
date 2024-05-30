@@ -1,9 +1,16 @@
+// components/HomeLayout.js
 import Footer from "./Footer";
 import { motion } from "framer-motion";
+import useLocomotiveScroll from "../hooks/useLocomotiveScroll";
 
 export default function HomeLayout({ children }) {
+  useLocomotiveScroll(true);
+
   return (
-    <div className="min-h-screen flex flex-col bg-black-100">
+    <div
+      className="min-h-screen flex flex-col bg-black-100"
+      data-scroll-container
+    >
       <header className="w-full bg-blue-600 text-white py-4">
         <div className="container mx-auto flex justify-between items-center px-4">
           <motion.h1
@@ -15,6 +22,15 @@ export default function HomeLayout({ children }) {
             My Landing Page
           </motion.h1>
           <nav>
+            <motion.a
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.1, duration: 1, ease: "easeInOut" }}
+              href="/"
+              className="px-3 py-2 rounded-md text-sm font-medium hover:bg-blue-700"
+            >
+              Home
+            </motion.a>
             <motion.a
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
