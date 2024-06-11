@@ -1,10 +1,9 @@
-// components/Layout.js
 import Footer from "./Footer";
 
 export default function Layout({ children }) {
   return (
     <div className="min-h-screen flex flex-col bg-black-100">
-      <header className="w-full bg-blue-600 text-white py-4">
+      <header className="fixed top-0 left-0 w-full bg-blue-600 text-white py-4 z-50">
         <div className="container mx-auto flex justify-between items-center px-4">
           <h1 className="text-3xl font-bold">My Landing Page</h1>
           <nav>
@@ -35,10 +34,12 @@ export default function Layout({ children }) {
           </nav>
         </div>
       </header>
-      <main className="flex-grow container mx-auto px-4 py-16 text-center">
+      <main className="flex-grow container mx-auto px-4 py-16 text-center mt-20 mb-16">
         {children}
       </main>
-      <Footer />
+      <footer className="fixed bottom-0 left-0 w-full">
+        <Footer />
+      </footer>
     </div>
   );
 }

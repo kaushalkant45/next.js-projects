@@ -50,9 +50,7 @@ export default function Home() {
       <nav
         id="navbar"
         className="fixed top-0 w-full bg-gray-900 z-50 transition-transform duration-300"
-      >
-        {/* Your navbar content */}
-      </nav>
+      ></nav>
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
